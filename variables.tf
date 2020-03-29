@@ -18,7 +18,7 @@ variable "local" {
 }
 
 variable "tune" {
-    type = object(
+    type = object({
         default_lease_ttl = string
         max_lease_ttl = string
         audit_non_hmac_response_keys = list(string)
@@ -27,6 +27,6 @@ variable "tune" {
         passthrough_request_headers = list(string)
         allowed_response_headers = list(string)
         token_type = string
-    )
+    })
     default = null
 }
